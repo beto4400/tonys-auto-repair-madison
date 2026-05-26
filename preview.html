@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RED CAR SOLUTIONS Preview</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f5f5f5;
+            line-height: 1.6;
+        }
+        .container { max-width: 1240px; margin: 0 auto; padding: 0 24px; }
+
+        /* NEW COLOR SCHEME */
+        :root {
+            --primary-red: #DC143C;
+            --secondary-orange: #FF6B35;
+            --accent-green: #10B981;
+            --dark-gray: #2D3748;
+            --light-blue: #E3F2FD;
+            --border-blue: #BBDEFB;
+            --text-light: #4A5568;
+        }
+
+        /* Emergency Banner */
+        .emergency-banner {
+            background: linear-gradient(90deg, var(--primary-red), #B5102C);
+            color: white;
+            padding: 12px 0;
+            text-align: center;
+            font-size: 13px;
+        }
+
+        /* Header */
+        .main-header {
+            background: white;
+            padding: 20px 0;
+            border-bottom: 1px solid #e2e8f0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-brand {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 900;
+            font-size: 24px;
+            color: var(--primary-red);
+        }
+
+        .logo-subtitle {
+            font-size: 12px;
+            color: var(--dark-gray);
+            font-weight: 600;
+            display: block;
+            letter-spacing: 1px;
+        }
+
+        .header-cta {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .phone-num {
+            font-weight: 700;
+            font-size: 16px;
+            color: var(--primary-red);
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: white;
+            padding: 80px 24px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: center;
+        }
+
+        .hero-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 48px;
+            font-weight: 900;
+            color: var(--dark-gray);
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .highlight-orange {
+            color: var(--primary-red);
+        }
+
+        .hero-subtitle {
+            font-size: 18px;
+            color: var(--text-light);
+            margin-bottom: 32px;
+            line-height: 1.6;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 14px;
+            text-transform: uppercase;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: all 200ms ease;
+        }
+
+        .btn-primary {
+            background: var(--primary-red);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #B5102C;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background: white;
+            border: 2px solid var(--primary-red);
+            color: var(--primary-red);
+        }
+
+        .btn-outline:hover {
+            background: rgba(220, 20, 60, 0.05);
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .quick-info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .info-card {
+            background: linear-gradient(135deg, #F5F7FA 0%, white 100%);
+            padding: 32px 24px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            text-align: center;
+        }
+
+        .info-icon {
+            font-size: 48px;
+            color: var(--primary-red);
+            margin-bottom: 16px;
+        }
+
+        .info-card h3 {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            font-size: 16px;
+            color: var(--dark-gray);
+            margin-bottom: 8px;
+        }
+
+        .info-card p {
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        /* Stats Section */
+        .stats-bar {
+            background: linear-gradient(90deg, var(--primary-red), #B5102C);
+            color: white;
+            padding: 40px 0;
+        }
+
+        .stats-flex {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .stat-num {
+            display: block;
+            font-family: 'Outfit', sans-serif;
+            font-size: 32px;
+            font-weight: 900;
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            display: block;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        /* Services Section */
+        .services-section {
+            background: white;
+            padding: 80px 24px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 56px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 6px 14px;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            background: rgba(220, 20, 60, 0.1);
+            color: var(--primary-red);
+            border-radius: 30px;
+            margin-bottom: 16px;
+        }
+
+        .section-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 40px;
+            font-weight: 900;
+            color: var(--dark-gray);
+            margin-bottom: 16px;
+        }
+
+        .section-desc {
+            font-size: 16px;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .service-card {
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+        }
+
+        .service-card.featured {
+            background: linear-gradient(135deg, var(--secondary-orange), #FF8C42);
+            color: white;
+        }
+
+        .service-card.standard {
+            background: var(--light-blue);
+            border: 1px solid var(--border-blue);
+        }
+
+        .card-header {
+            padding: 32px 24px;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .card-header h3 {
+            font-size: 20px;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        .card-header p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .card-tag {
+            display: inline-block;
+            padding: 4px 12px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        /* Why Choose Section */
+        .why-section {
+            background: white;
+            padding: 80px 24px;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: center;
+        }
+
+        .features-list {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            margin-top: 32px;
+        }
+
+        .feature-item {
+            display: flex;
+            gap: 16px;
+        }
+
+        .feature-icon {
+            color: var(--accent-green);
+            font-size: 24px;
+            flex-shrink: 0;
+        }
+
+        .feature-item h4 {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            color: var(--dark-gray);
+            margin-bottom: 4px;
+        }
+
+        .feature-item p {
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        /* Footer */
+        .main-footer {
+            background: var(--dark-gray);
+            color: white;
+            padding: 60px 24px 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand-info p {
+            font-size: 14px;
+            line-height: 1.6;
+            margin-top: 12px;
+            opacity: 0.8;
+        }
+
+        .footer-links h3,
+        .footer-services h3 {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            margin-bottom: 16px;
+            font-size: 14px;
+        }
+
+        .footer-links ul,
+        .footer-services ul {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer-links a,
+        .footer-services a {
+            color: white;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        .footer-links a:hover,
+        .footer-services a:hover {
+            color: var(--primary-red);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 20px;
+            text-align: center;
+            font-size: 13px;
+            opacity: 0.7;
+        }
+
+        @media (max-width: 768px) {
+            .hero-content { grid-template-columns: 1fr; }
+            .services-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .stats-flex { grid-template-columns: 1fr 1fr; }
+            .why-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Emergency Banner -->
+<div class="emergency-banner">
+    <div class="container">
+        <span style="font-weight: 600;">🚨 24/7 EMERGENCY FLATBED TOWING: Call us now!</span>
+        <a href="tel:6088677202" style="color: white; font-weight: 700;"> (608) 867-7202</a>
+    </div>
+</div>
+
+<!-- Header -->
+<header class="main-header">
+    <div class="container nav-container">
+        <div>
+            <div class="logo-brand">RED CAR</div>
+            <div class="logo-subtitle">SOLUTIONS</div>
+        </div>
+        <div class="header-cta">
+            <div>
+                <span style="font-size: 12px; color: #999;">Towing Dispatch 24/7</span>
+                <div class="phone-num">(608) 867-7202</div>
+            </div>
+            <button class="btn btn-primary">Get Free Estimate</button>
+        </div>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="container hero-content">
+        <div>
+            <h1 class="hero-title">Madison's Trusted <span class="highlight-orange">Auto Repair Shop.</span></h1>
+            <p class="hero-subtitle">Professional auto repair, computer diagnostics, and 24/7 emergency towing across Madison, Wisconsin.</p>
+            <div class="hero-actions">
+                <button class="btn btn-primary">📅 Request Free Estimate</button>
+                <button class="btn btn-outline">🚗 Need a Tow? Call 24/7</button>
+            </div>
+        </div>
+        <div class="quick-info-grid">
+            <div class="info-card">
+                <div class="info-icon">🔧</div>
+                <h3>Expert Mechanic Repairs</h3>
+                <p>Brakes, Engine Tuning, AC Service & Diagnostics</p>
+            </div>
+            <div class="info-card">
+                <div class="info-icon">🚚</div>
+                <h3>24/7 Flatbed Towing</h3>
+                <p>Roadside Assistance, Jumpstarts & Recovery</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Stats Bar -->
+<section class="stats-bar">
+    <div class="container stats-flex">
+        <div class="stat-item">
+            <span class="stat-num">15+</span>
+            <span class="stat-label">Years Serving Madison</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-num">Free</span>
+            <span class="stat-label">Estimates & Diagnoses</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-num">24/7</span>
+            <span class="stat-label">Emergency Dispatch</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-num">100%</span>
+            <span class="stat-label">Guaranteed Satisfaction</span>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section class="services-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="badge">Our Core Services</span>
+            <h2 class="section-title">Professional Auto Service & Emergency Towing</h2>
+            <p class="section-desc">Honest mechanic work and swift roadside assistance when you need it most.</p>
+        </div>
+
+        <div class="services-grid">
+            <!-- Featured Service Card -->
+            <div class="service-card featured">
+                <div class="card-header">
+                    <div class="card-tag">Available 24/7</div>
+                    <h3>🚛 24/7 Flatbed Towing & Roadside</h3>
+                    <p>Professional emergency assistance across Madison. Locked out, flat tire, or dead battery? Call us instantly.</p>
+                </div>
+            </div>
+
+            <!-- Standard Service Card (Blue) -->
+            <div class="service-card standard">
+                <div class="card-header">
+                    <div class="card-tag" style="background: rgba(0,0,0,0.1); color: #2D3748;">Free Estimates</div>
+                    <h3 style="color: #2D3748;">🔧 Mechanical Repair & Diagnostics</h3>
+                    <p style="color: #4A5568;">We read and fix dashboard warning lights. Advanced diagnostics, brakes, engine maintenance & more.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose Us -->
+<section class="why-section">
+    <div class="container why-grid">
+        <div>
+            <span class="badge">Trusted Madison Locals</span>
+            <h2 class="section-title">A Safe Drive Starts with Expert Care</h2>
+            <div class="features-list">
+                <div class="feature-item">
+                    <div class="feature-icon">✓</div>
+                    <div>
+                        <h4>No Guesswork Diagnostics</h4>
+                        <p>We scan your systems and identify the exact issue for free.</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">✓</div>
+                    <div>
+                        <h4>Transparent Free Estimates</h4>
+                        <p>Know the costs before we touch anything. No hidden fees.</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">✓</div>
+                    <div>
+                        <h4>ASE-Certified Mechanics</h4>
+                        <p>Your vehicle is serviced by trained specialists.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="background: var(--light-blue); padding: 40px; border-radius: 12px; text-align: center;">
+            <h3 style="font-family: 'Outfit', sans-serif; font-size: 20px; font-weight: 800; color: #2D3748; margin-bottom: 16px;">Diagnostic Peace of Mind</h3>
+            <p style="color: #4A5568; margin-bottom: 24px;">We test your engine, brakes, emissions and dashboard warnings to ensure complete safety.</p>
+            <button class="btn btn-primary">Get Your Free Quote</button>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="main-footer">
+    <div class="container footer-grid">
+        <div class="footer-brand-info">
+            <div>
+                <div style="font-size: 24px; font-weight: 900; color: var(--primary-red);">RED CAR</div>
+                <div style="font-size: 12px; font-weight: 600; letter-spacing: 1px;">SOLUTIONS</div>
+            </div>
+            <p>Professional-grade mechanical maintenance, computer diagnostics, and 24/7 flatbed towing across Madison, Wisconsin.</p>
+        </div>
+
+        <div class="footer-links">
+            <h3>Quick Navigation</h3>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Free Estimate</a></li>
+                <li><a href="#">Find Us</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-services">
+            <h3>Core Services</h3>
+            <ul>
+                <li><a href="#">Engine Diagnostics</a></li>
+                <li><a href="#">Brake Service</a></li>
+                <li><a href="#">Suspension Work</a></li>
+                <li><a href="#">24/7 Towing</a></li>
+                <li><a href="#">Roadside Help</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 RED CAR SOLUTIONS. All Rights Reserved. Madison, WI.</p>
+        <p>Emergency Dispatch: <a href="tel:6088677202" style="color: var(--primary-red);">(608) 867-7202</a></p>
+    </div>
+</footer>
+
+</body>
+</html>
