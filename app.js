@@ -1,5 +1,5 @@
 /* ==========================================================================
-   TONY'S AUTO REPAIR & TOWING - INTERACTIVITY (app.js)
+   RED CAR SOLUTIONS - INTERACTIVITY (app.js)
    Custom Interactive Engine (Pure Vanilla Javascript)
    ========================================================================== */
 

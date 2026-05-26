@@ -1,5 +1,5 @@
 /* ==========================================================================
-   TONY'S AUTO REPAIR & TOWING - STYLESHEET
+   RED CAR SOLUTIONS - STYLESHEET
    Premium Minimalist Custom Styling System (Pure Vanilla CSS)
    ========================================================================== */
 
@@ -10,23 +10,23 @@
     --bg-dark-card: #FFFFFF;
     --bg-dark-hover: #F0F2F5;
 
-    --color-orange: #FF6B00;
-    --color-orange-hover: #FF8533;
-    --color-orange-glow: rgba(255, 107, 0, 0.15);
+    --color-orange: #DC143C;
+    --color-orange-hover: #B5102C;
+    --color-orange-glow: rgba(220, 20, 60, 0.15);
 
-    --color-cyan: #0052CC;
-    --color-cyan-hover: #003DA5;
-    --color-cyan-glow: rgba(0, 82, 204, 0.15);
+    --color-cyan: #E3F2FD;
+    --color-cyan-hover: #BBDEFB;
+    --color-cyan-glow: rgba(227, 242, 253, 0.15);
 
-    --color-red: #FF3B30;
-    --color-red-glow: rgba(255, 59, 48, 0.15);
+    --color-red: #10B981;
+    --color-red-glow: rgba(16, 185, 129, 0.15);
 
     --text-white: #2D3748;
     --text-light: #4A5568;
     --text-muted: #718096;
     --border-color: rgba(0, 0, 0, 0.08);
-    --border-glow-cyan: rgba(0, 82, 204, 0.1);
-    --border-glow-orange: rgba(255, 107, 0, 0.1);
+    --border-glow-cyan: rgba(227, 242, 253, 0.1);
+    --border-glow-orange: rgba(220, 20, 60, 0.1);
     
     --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     --font-body: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
