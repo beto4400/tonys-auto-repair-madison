@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tony's Auto Repair & Towing | Madison, WI | Free Estimates</title>
+    <meta name="description" content="Tony's Auto Repair & Towing in Madison, WI. Trusted local mechanics offering general repairs, expert diagnostics, free estimates, and 24/7 flatbed towing.">
+    <!-- Google Fonts: Outfit & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Emergency Mobile Banner (Sticky at Top for Towing emergencies) -->
+    <div class="emergency-banner" id="emergencyBanner">
+        <div class="container emergency-flex">
+            <span class="emergency-text">
+                <span class="pulse-icon"></span>
+                <strong>24/7 EMERGENCY FLATBED TOWING:</strong> Stranded? Call us now!
+            </span>
+            <a href="tel:6088677202" class="btn btn-emergency btn-sm">
+                <i class="fa-solid fa-truck-pickup"></i> CALL (608) 867-7202
+            </a>
+        </div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="main-header" id="mainHeader">
+        <div class="container nav-container">
+            <a href="#hero" class="logo">
+                <span class="logo-brand">TONY'S</span>
+                <span class="logo-subtitle">AUTO REPAIR & TOWING</span>
+            </a>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <!-- Navigation Links (Minimalist list) -->
+            <nav class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="#hero" class="nav-link active">Home</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#booking" class="nav-link">Free Estimate</a></li>
+                    <li><a href="#contact" class="nav-link">Find Us</a></li>
+                </ul>
+            </nav>
+
+            <!-- Desktop Header Call-to-action -->
+            <div class="header-cta">
+                <a href="tel:6088677202" class="phone-link">
+                    <span class="phone-sub">Towing Dispatch 24/7</span>
+                    <span class="phone-num">(608) 867-7202</span>
+                </a>
+                <a href="#booking" class="btn btn-primary btn-md">Get Free Estimate</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section with clean car interior/dashboard (no check engine lights) -->
+    <section class="hero-section" id="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <div class="hero-text-block">
+                <div class="trust-badge">
+                    <i class="fa-solid fa-circle-check"></i> FREE ESTIMATES ON ALL REPAIRS
+                </div>
+                <h1 class="hero-title">
+                    Madison's Trusted<br>
+                    <span class="highlight-orange">Auto Repair Shop.</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Diagnostics that pinpoint the issue and repairs that last. We keep your dashboard clear, your engine healthy, and your vehicle running like it did on day one.
+                </p>
+                <div class="hero-actions">
+                    <a href="#booking" class="btn btn-primary btn-lg">
+                        <i class="fa-regular fa-calendar-check"></i> Request Free Estimate
+                    </a>
+                    <a href="tel:6088677202" class="btn btn-outline-orange btn-lg">
+                        <i class="fa-solid fa-truck-pickup"></i> Need a Tow? Call 24/7
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Info Cards -->
+            <div class="quick-info-grid">
+                <div class="info-card">
+                    <div class="info-icon repair-icon"><i class="fa-solid fa-wrench"></i></div>
+                    <h3>Expert Mechanic Repairs</h3>
+                    <p>Brakes, Engine Tuning, AC Service & Advanced Computer Diagnostics</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon towing-icon"><i class="fa-solid fa-truck-monster"></i></div>
+                    <h3>24/7 Flatbed Towing</h3>
+                    <p>Roadside Assistance, Jumpstarts, lockouts & US-style flatbed recovery</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Bottom slanted shape divider for modern transition -->
+        <div class="section-divider"></div>
+    </section>
+
+    <!-- Stats Bar -->
+    <section class="stats-bar">
+        <div class="container stats-flex">
+            <div class="stat-item">
+                <span class="stat-num">15+</span>
+                <span class="stat-label">Years Serving Madison</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <span class="stat-num">Free</span>
+                <span class="stat-label">Estimates & Diagnoses</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <span class="stat-num">24/7</span>
+                <span class="stat-label">Emergency Tow Dispatch</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <span class="stat-num">100%</span>
+                <span class="stat-label">Guaranteed Satisfaction</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section (General Repairs & Flatbed Towing Only) -->
+    <section class="services-section" id="services">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="badge badge-accent">Our Core Services</span>
+                <h2 class="section-title">Professional Auto Service & Emergency Towing</h2>
+                <div class="title-decor"></div>
+                <p class="section-desc">Honest mechanic work and swift roadside assistance when you need it most. Get transparent quotes and expert repairs in Madison.</p>
+            </div>
+
+            <div class="services-grid services-two-columns">
+                <!-- Service Card 1: Auto Repair -->
+                <div class="service-card card-repair">
+                    <div class="card-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1517524206127-48bbd363f3d7?auto=format&fit=crop&q=80&w=800" alt="Tony's Auto Repair Shop in Madison" class="card-image">
+                        <div class="card-tag tag-repair">Free Estimates</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-icon-round"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+                        <h3 class="card-heading">Mechanical Repair & Diagnostics</h3>
+                        <p class="card-text">We read and fix whatever triggers your dashboard warning lights. Get back on the road safely with our complete general mechanics suite.</p>
+                        <ul class="card-features">
+                            <li><i class="fa-solid fa-circle-check text-cyan"></i> Advanced Dashboard Light & Computer Diagnostics</li>
+                            <li><i class="fa-solid fa-circle-check text-cyan"></i> Brakes, Shocks, Struts & Complete Suspension</li>
+                            <li><i class="fa-solid fa-circle-check text-cyan"></i> Engine Maintenance, Fluid Flush & Oil Swaps</li>
+                            <li><i class="fa-solid fa-circle-check text-cyan"></i> AC Recharging, Radiator & Alternator Services</li>
+                        </ul>
+                        <div class="card-footer-action">
+                            <a href="#booking" class="btn btn-secondary btn-full btn-repair-link">Request Mechanical Estimate</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service Card 2: U.S. Style Flatbed Towing -->
+                <div class="service-card card-towing">
+                    <div class="card-image-wrapper">
+                        <img src="./GRUA.png" alt="U.S. Flatbed Tow Truck active on roadside rescue" class="card-image">
+                        <div class="card-tag tag-towing">Available 24/7</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-icon-round"><i class="fa-solid fa-truck-ramp-box"></i></div>
+                        <h3 class="card-heading">24/7 Flatbed Towing & Roadside</h3>
+                        <p class="card-text">Locked out, got a flat tire, or a dead battery? Our professional American flatbed tow trucks are dispatched instantly across Madison.</p>
+                        <ul class="card-features">
+                            <li><i class="fa-solid fa-circle-check text-red"></i> Rapid Response Flatbed Towing (Local & Highway)</li>
+                            <li><i class="fa-solid fa-circle-check text-red"></i> Emergency Lockout Rescue & Key Extraction</li>
+                            <li><i class="fa-solid fa-circle-check text-red"></i> Battery Jumpstarts & On-the-road assistance</li>
+                            <li><i class="fa-solid fa-circle-check text-red"></i> Roadside Flat Tire Swaps & Fuel Delivery</li>
+                        </ul>
+                        <div class="card-footer-action">
+                            <a href="tel:6088677202" class="btn btn-emergency btn-full">
+                                <i class="fa-solid fa-phone"></i> Call Now: (608) 867-7202
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Grid (Re-focused on Trusted Madison Locals & Clear Dashboards) -->
+    <section class="why-choose-us">
+        <div class="container">
+            <div class="why-grid">
+                <div class="why-text-block">
+                    <span class="badge badge-accent-orange">Trusted Madison Locals</span>
+                    <h2>A Safe Drive Starts with a Clean Dashboard</h2>
+                    <p>At Tony's Auto Repair & Towing, we take pride in honest mechanic work, upfront pricing, and absolute safety. We verify all dashboard components and electrical networks to ensure your vehicle leaves with zero warning lights and 100% mechanical functionality.</p>
+                    
+                    <div class="features-list">
+                        <div class="feature-item-small">
+                            <div class="feature-small-icon"><i class="fa-solid fa-check"></i></div>
+                            <div>
+                                <h4>No Guesswork Diagnostics</h4>
+                                <p>We scan your OBD networks and sensors, identifying the exact root cause of warning lights for free.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item-small">
+                            <div class="feature-small-icon"><i class="fa-solid fa-check"></i></div>
+                            <div>
+                                <h4>Transparent Free Estimates</h4>
+                                <p>Know the costs before we pick up a wrench. No hidden fees, ever.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item-small">
+                            <div class="feature-small-icon"><i class="fa-solid fa-check"></i></div>
+                            <div>
+                                <h4>ASE-Certified Mechanics</h4>
+                                <p>Your vehicle is serviced by trained specialists using modern industrial mechanical equipment.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="why-visual-block">
+                    <div class="visual-card">
+                        <div class="visual-glowing-effect"></div>
+                        <div class="visual-info">
+                            <h3>Diagnostic Peace of Mind</h3>
+                            <p>We test your engine, oil pressure, brakes, emissions, and dashboard warnings to ensure your car is completely cleared for a safe drive.</p>
+                            <div class="dash-reassurance-box">
+                                <i class="fa-solid fa-circle-check text-cyan"></i>
+                                <span>Zero Warning Lights & Check Engine On</span>
+                            </div>
+                            <a href="#booking" class="btn btn-primary btn-full"><i class="fa-solid fa-file-invoice-dollar"></i> Get Your Free Quote</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking & Estimate Portal (Streamlined Single-Step Form) -->
+    <section class="booking-section" id="booking">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="badge badge-accent">Free Estimate</span>
+                <h2 class="section-title">Request a Free Estimate</h2>
+                <div class="title-decor"></div>
+                <p class="section-desc">Call us directly and speak with a certified mechanic. We'll listen to your vehicle's issue and give you an honest, no-pressure estimate right away.</p>
+            </div>
+
+            <!-- Phone-First Estimate Card -->
+            <div class="booking-card text-center">
+                <div class="estimate-phone-icon">
+                    <i class="fa-solid fa-phone-volume"></i>
+                </div>
+                <h3 class="estimate-card-title">Talk to a Certified Mechanic Instantly</h3>
+                <p class="estimate-card-subtitle">No web forms, no emails, no waiting. Speak directly with Tony or our dispatcher. We will hear what's happening with your vehicle and provide an honest, transparent estimate immediately.</p>
+                
+                <div class="estimate-cta-block">
+                    <a href="tel:6088677202" class="btn btn-primary btn-glow btn-lg">
+                        <i class="fa-solid fa-phone"></i> Call for Free Estimate: (608) 867-7202
+                    </a>
+                </div>
+
+                <div class="info-requirements-box">
+                    <h4>Have This Info Ready for a Faster Quote:</h4>
+                    <div class="requirements-grid">
+                        <div class="req-item">
+                            <span class="req-num">1</span>
+                            <span class="req-text">Vehicle Year, Make & Model</span>
+                        </div>
+                        <div class="req-item">
+                            <span class="req-num">2</span>
+                            <span class="req-text">Dashboard Lights or Symptoms</span>
+                        </div>
+                        <div class="req-item">
+                            <span class="req-num">3</span>
+                            <span class="req-text">Preferred Drop-off Day & Time</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Map Section (Simplified as requested, only Google Maps Link & Card) -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info-block">
+                    <span class="badge badge-accent">Location & Hours</span>
+                    <h2>Find Tony's in Madison</h2>
+                    <p>Conveniently located at 2825 Perry St. Drop off your car for mechanical repairs or let our flatbed emergency tow trucks fetch you instantly.</p>
+
+                    <div class="contact-detail-items">
+                        <div class="contact-item">
+                            <div class="contact-item-icon"><i class="fa-solid fa-location-dot"></i></div>
+                            <div>
+                                <h4>Shop Address</h4>
+                                <p><a href="https://maps.google.com/?q=2825+Perry+St,+Madison,+WI+53713" target="_blank" class="address-map-link">2825 Perry St, Madison, WI 53713</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-item-icon"><i class="fa-solid fa-phone"></i></div>
+                            <div>
+                                <h4>Direct Phone Line</h4>
+                                <p><a href="tel:6088677202" class="phone-dark-link">(608) 867-7202</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-item-icon"><i class="fa-solid fa-clock"></i></div>
+                            <div>
+                                <h4>Working Hours</h4>
+                                <p>Monday - Friday: 8:00 AM - 6:00 PM<br>Saturday: 9:00 AM - 3:00 PM<br>Sunday: Emergency Towing & Roadside ONLY (24/7)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Google Maps Direction Panel (Clean Dark theme card) -->
+                <div class="map-visual-container">
+                    <div class="map-glow-glow"></div>
+                    <div class="map-inner-canvas map-card-simple">
+                        <div class="map-card-content text-center">
+                            <div class="map-card-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+                            <h3>Open Google Maps Directions</h3>
+                            <p>We are located at 2825 Perry St, Madison, WI 53713, easily accessible from Hwy 14 (Park St) and the Beltline Highway.</p>
+                            <a href="https://maps.google.com/?q=2825+Perry+St,+Madison,+WI+53713" target="_blank" class="btn btn-outline-cyan btn-lg">
+                                <i class="fa-solid fa-diamond-turn-right"></i> Navigate with Google Maps
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand-info">
+                <a href="#hero" class="logo">
+                    <span class="logo-brand">TONY'S</span>
+                    <span class="logo-subtitle">AUTO REPAIR & TOWING</span>
+                </a>
+                <p class="footer-desc">Professional-grade general mechanical maintenance, computer-guided troubleshooting, and 24/7 flatbed towing across Madison, Wisconsin. Get your free estimates today.</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <h3>Quick Navigation</h3>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#booking">Free Estimate</a></li>
+                    <li><a href="#contact">Find Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-services">
+                <h3>Our Core Offerings</h3>
+                <ul>
+                    <li><a href="#services">Engine Diagnostics</a></li>
+                    <li><a href="#services">Brake Inspections & Swaps</a></li>
+                    <li><a href="#services">Suspension, Shocks & Steering</a></li>
+                    <li><a href="#services">24/7 Roadside Towing</a></li>
+                    <li><a href="#services">Lockouts & Jumpstarts</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container footer-bottom-flex">
+                <p>&copy; 2026 Tony's Auto Repair & Towing. All Rights Reserved. Madison, WI.</p>
+                <p>Emergency Dispatch: <a href="tel:6088677202">(608) 867-7202</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Sticky Call Button (Amber glowing action that floats on scroll) -->
+    <a href="tel:6088677202" class="floating-call-btn" id="floatingCallBtn" aria-label="Call Towing Dispatch Immediately">
+        <i class="fa-solid fa-phone"></i>
+        <span class="floating-call-text">TOWING 24/7</span>
+    </a>
+
+    <!-- JS Custom Logic -->
+    <script src="app.js"></script>
+</body>
+</html>
