@@ -224,11 +224,6 @@ ul {
     animation: critical-pulse 2s infinite;
 }
 
-.btn-emergency:hover {
-    background: var(--color-orange-hover);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px var(--color-orange-glow);
-}
 
 .btn-outline-orange {
     background: transparent;
@@ -817,9 +812,15 @@ ul {
 }
 
 .btn-repair-link:hover {
-    background: var(--color-cyan-hover) !important;
+    filter: brightness(1.08) !important;
     transform: translateY(-2px) !important;
     box-shadow: 0 6px 20px var(--color-cyan-glow) !important;
+}
+
+.btn-emergency:hover {
+    filter: brightness(1.08);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px var(--color-orange-glow);
 }
 
 /* ==========================================================================
@@ -1157,6 +1158,24 @@ ul {
 
 .phone-dark-link:hover {
     color: var(--color-cyan-hover);
+}
+
+/* Clickable map card link wrapper */
+.map-card-link {
+    display: flex;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+}
+
+.map-card-link:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 24px 50px rgba(0, 82, 204, 0.12);
+    border-color: var(--border-glow-cyan);
+}
+
+/* Mobile-only sticky bottom call bar */
+.mobile-sticky-call {
+    display: none;
 }
 
 /* Simple GPS navigation overlay placeholder card */
@@ -1622,15 +1641,45 @@ ul {
         border-bottom: none;
     }
     
+    /* Hide floating circle button — replaced by sticky bar below */
     .floating-call-btn {
-        bottom: 24px;
-        right: 24px;
-        padding: 14px;
-        border-radius: 50%;
+        display: none;
     }
-    
-    .floating-call-text {
-        display: none; /* Hide label text on mobile to keep it circular */
+
+    /* Full-width sticky call bar at bottom */
+    .mobile-sticky-call {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 997;
+        background: var(--color-orange);
+        color: #ffffff;
+        padding: 16px 24px;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        font-family: var(--font-heading);
+        font-weight: 800;
+        font-size: 16px;
+        letter-spacing: 0.5px;
+        box-shadow: 0 -4px 20px rgba(255, 107, 0, 0.35);
+        text-transform: uppercase;
+    }
+
+    .mobile-sticky-call:hover {
+        background: var(--color-orange-hover);
+    }
+
+    /* Prevent last content from being hidden under the sticky bar */
+    body {
+        padding-bottom: 64px;
+    }
+
+    /* Safe Drive section: show visual card FIRST on mobile */
+    .why-visual-block {
+        order: -1;
     }
     
     .footer-grid {
