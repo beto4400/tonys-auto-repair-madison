@@ -21,9 +21,12 @@
     --color-red: #10B981;
     --color-red-glow: rgba(16, 185, 129, 0.15);
 
-    --text-white: #2D3748;
-    --text-light: #4A5568;
-    --text-muted: #718096;
+    /* NUEVA ESCALA DE GRISES - WCAG 2.1 AA COMPLIANT */
+    --text-dark: #1F2937;
+    --text-light: #4B5563;
+    --text-muted: #8B94A5;
+    --text-placeholder: #D1D5DB;
+    --text-white: #FFFFFF;
     --border-color: rgba(0, 0, 0, 0.08);
     --border-glow-cyan: rgba(227, 242, 253, 0.1);
     --border-glow-orange: rgba(220, 20, 60, 0.1);
@@ -81,7 +84,7 @@ ul {
     background: var(--bg-dark-deep);
 }
 ::-webkit-scrollbar-thumb {
-    background: #CBD5E0;
+    background: #9CA3AF;
     border-radius: 5px;
     border: 2px solid var(--bg-dark-deep);
 }
@@ -1335,7 +1338,7 @@ ul {
     border-top: 1px solid var(--border-color);
     padding: 24px 0;
     background-color: #050608;
-    color: #4B5A70;
+    color: #D1D5DB;
     font-size: 12.5px;
 }
 
